@@ -744,3 +744,11 @@
 								'monkestation/code/modules/donator/sounds/starfathersuit_scream_3.ogg',
 								'monkestation/code/modules/donator/sounds/starfathersuit_scream_4.ogg',
 								'monkestation/code/modules/donator/sounds/starfathersuit_scream_5.ogg',)
+
+/obj/item/clothing/suit/jacket/peacejacket
+	name = "Tattered Peace Jacket"
+	desc = " A once armored suit, reduced to just its coat over years of conflict. A peace sign has been spraypainted on the back, in spite of the scars and dried blood."
+	icon = 'monkestation/code/modules/donator/icons/obj/clothing.dmi'
+	worn_icon = 'monkestation/code/modules/donator/icons/mob/clothing.dmi'
+	icon_state = "peacejacket"
+	worn_icon_state = "peacejacket"
