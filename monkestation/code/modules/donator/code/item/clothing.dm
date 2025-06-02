@@ -751,4 +751,3 @@
 	icon = 'monkestation/code/modules/donator/icons/obj/clothing.dmi'
 	worn_icon = 'monkestation/code/modules/donator/icons/mob/clothing.dmi'
 	icon_state = "peacejacket"
-	worn_icon_state = "peacejacket"
