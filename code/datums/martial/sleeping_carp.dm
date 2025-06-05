@@ -17,6 +17,7 @@
 	var/zone_message = "" //string for where the attack is targetting
 	var/zone = null //where the attack is targetting
 	var/stamina_damage = 0
+	var/counter = FALSE 
 
 /datum/martial_art/the_sleeping_carp/teach(mob/living/carbon/human/target, make_temporary = FALSE)
 	. = ..()
