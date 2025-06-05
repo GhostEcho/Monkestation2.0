@@ -10,8 +10,6 @@
 	display_combos = TRUE
 	COOLDOWN_DECLARE(block_cooldown)
 	var/list/scarp_traits = list(TRAIT_NOGUNS, TRAIT_HARDLY_WOUNDED, TRAIT_NODISMEMBER, TRAIT_HEAVY_SLEEPER, TRAIT_THROW_GUNS)
-	var/deflect_cooldown = 3 SECONDS //monke edit start
-	var/deflect_stamcost = 15 //how much stamina it costs per bullet deflected
 	var/log_name = "Sleeping Carp"
 	var/damage = 30
 	var/kick_speed = 0 //how fast you get punted into the stratosphere on launchkick
@@ -19,7 +17,6 @@
 	var/zone_message = "" //string for where the attack is targetting
 	var/zone = null //where the attack is targetting
 	var/stamina_damage = 0
-	var/counter = FALSE //monke edit end
 
 /datum/martial_art/the_sleeping_carp/teach(mob/living/carbon/human/target, make_temporary = FALSE)
 	. = ..()
@@ -234,9 +231,7 @@
 		span_danger("[carp_user] effortlessly swats [hitting_projectile] aside! [carp_user.p_They()] can block bullets with [carp_user.p_their()] bare hands!"),
 		span_userdanger("You deflect [hitting_projectile]!"),
 	)
-	COOLDOWN_START(src, block_cooldown, deflect_cooldown)// monke edit start
 	playsound(carp_user, pick('sound/weapons/bulletflyby.ogg', 'sound/weapons/bulletflyby2.ogg', 'sound/weapons/bulletflyby3.ogg'), vol = 75, vary = TRUE)
-	carp_user.stamina?.adjust(deflect_stamcost) //monke edit end
 	hitting_projectile.firer = carp_user
 	hitting_projectile.set_angle(rand(0, 360))//SHING
 	return COMPONENT_BULLET_PIERCED
